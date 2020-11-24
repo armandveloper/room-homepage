@@ -21,6 +21,9 @@ body {
 a {
 	text-decoration: none;
 }
+img {
+	max-width: 100%;
+}
 /* Tipografía */
 .heading-1,
 .heading-2 {
