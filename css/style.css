@@ -60,7 +60,7 @@ img {
 .hero {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: auto auto;
+	grid-template-rows: auto auto auto;
 }
 @media (min-width: 56.25em) {
 	.hero {
@@ -81,6 +81,13 @@ img {
 	width: 100%;
 	display: block;
 	object-fit: cover;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+.hero__img.active,
+.hero__img.active img {
+	opacity: 1;
+	z-index: 1;
 }
 @media (min-width: 56.25em) {
 	.hero__img {
@@ -216,11 +223,12 @@ img {
 	top: -2px;
 }
 .slider__controls {
-	grid-row: 1 / 3;
+	grid-row: 1 / 4;
 	grid-column: 1 / -1;
 	align-self: end;
 	justify-self: end;
 	display: flex;
+	z-index: 1;
 }
 @media (min-width: 56.25em) {
 	.slider__controls {
@@ -253,6 +261,12 @@ img {
 }
 @media (min-width: 56.25em) {
 	.slider__control {
+		height: 6rem;
+		width: 6rem;
+	}
+}
+@media (min-width: 75em) {
+	.slider__control {
 		height: 7.5rem;
 		width: 7.5rem;
 	}
@@ -262,6 +276,14 @@ img {
 }
 .hero__info {
 	padding: 6.5rem 0 5.5rem;
+	grid-row: 4 / 5;
+	grid-column: 1 / -1;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+.hero__info.active {
+	opacity: 1;
+	z-index: 1;
 }
 @media (min-width: 56.25em) {
 	.hero__info {
@@ -316,6 +338,8 @@ img {
 	padding: 6rem 0;
 }
 .about__img {
+	display: block;
+	object-fit: cover;
 	width: 100%;
 }
 @media (min-width: 56.25em) {
@@ -337,8 +361,6 @@ img {
 	}
 	.about__img {
 		height: 100%;
-		display: block;
-		object-fit: cover;
 	}
 	.about__img:last-child {
 		grid-column: -1 / span 1;
