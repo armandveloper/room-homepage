@@ -1,0 +1,151 @@
+:root {
+	--dark-gray: hsl(0, 0%, 63%);
+	--black: hsl(0, 0%, 0%);
+	--white: hsl(0, 0%, 100%);
+	--very-dark-gray: hsl(0, 0%, 27%);
+}
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+body {
+	font-family: 'Spartan', system-ui, sans-serif;
+	font-size: 1.6rem;
+	margin: 0;
+}
+a {
+	text-decoration: none;
+}
+/* Tipografía */
+.heading-1,
+.heading-2 {
+	font-weight: 700;
+	margin: 0;
+}
+.heading-1 {
+	font-size: 3rem;
+	margin-bottom: 2.5rem;
+}
+.heading-2 {
+	color: var(--very-dark-gray);
+	font-size: 1.6rem;
+	letter-spacing: 2.5px;
+	margin-bottom: 2rem;
+	text-transform: uppercase;
+}
+.wrapper {
+	max-width: calc(144rem + (2rem * 2));
+	margin: 0 auto;
+	padding: 0 2rem;
+	width: 100%;
+}
+.hero {
+	/* height: 50vh; */
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+}
+.hero__img {
+	grid-row: 1 / -1;
+	grid-column: 1 / -1;
+	/* height: 100%; */
+	width: 100%;
+	/* display: block; */
+	/* object-fit: cover; */
+}
+.hero .nav-container {
+	grid-row: 1 / 1;
+	grid-column: 1 / -1;
+	padding-top: 4rem;
+	z-index: 10;
+}
+.nav--mobile {
+	display: flex;
+	align-items: center;
+}
+.nav__button {
+	background: none;
+	border: none;
+	cursor: pointer;
+	margin-left: 2rem;
+	padding: 0;
+}
+.nav__button:focus {
+	outline: none;
+}
+.logo__box {
+	margin: 0 auto;
+	position: relative;
+	left: -2rem;
+}
+.slider__controls {
+	grid-row: 2 / 3;
+	grid-column: 1 / -1;
+	z-index: 10;
+	align-self: end;
+	justify-self: end;
+	display: flex;
+}
+.slider__control {
+	background-color: var(--black);
+	border: none;
+	cursor: pointer;
+	height: 5rem;
+	margin: 0;
+	padding: 0;
+	width: 5rem;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	transition: background-color 0.3s;
+}
+.slider__control:focus {
+	outline: none;
+}
+.slider__control:hover {
+	background-color: var(--very-dark-gray);
+}
+.slider__control-icon {
+	height: 2rem;
+}
+.hero-info {
+	padding: 6.5rem 0 5.5rem;
+}
+.text {
+	color: var(--very-dark-gray);
+	font-size: 1.2rem;
+	line-height: 1.7;
+	margin: 0;
+}
+.btn {
+	transition: color 0.3s;
+}
+.btn--icon {
+	color: var(--very-dark-gray);
+	font-size: 2rem;
+	font-weight: 600;
+	letter-spacing: 0.8rem;
+	margin-top: 5rem;
+	text-transform: uppercase;
+	display: flex;
+	align-items: center;
+}
+.btn--icon:hover,
+.btn--icon:focus {
+	color: var(--dark-gray);
+}
+.btn--icon__icon {
+	margin-left: 2.5rem;
+}
+.btn--icon__icon path {
+	fill: currentColor;
+	transition: fill 0.3s;
+}
+.about__content {
+	padding: 6rem 0;
+}
