@@ -22,21 +22,67 @@
 	</head>
 	<body>
 		<div class="hero">
-			<div class="nav-container">
-				<nav class="nav nav--mobile nav--mobile-fake">
-					<button class="nav__button" title="Open Menu">
+			<!-- <div class="hero__slider"> -->
+			<div class="nav--mobile__container">
+				<nav class="nav--mobile-fake">
+					<button
+						class="nav__button"
+						title="Open Menu"
+						id="nav-mobile-open"
+					>
 						<img src="img/icon-hamburger.svg" alt="" />
 					</button>
 					<a href="/" class="logo__box">
 						<img src="img/logo.svg" alt="Room Logo" class="logo" />
 					</a>
 				</nav>
+				<nav class="nav--mobile" id="nav-mobile">
+					<ul class="nav--mobile__list">
+						<li class="nav--mobile__close">
+							<button
+								class="nav--mobile__close-icon"
+								title="Close menu"
+								id="nav-mobile-close"
+							>
+								<img src="img/icon-close.svg" alt="" />
+							</button>
+						</li>
+						<li class="nav--mobile__item">
+							<a href="#" class="nav--mobile__link">home</a>
+						</li>
+						<li class="nav--mobile__item">
+							<a href="#" class="nav--mobile__link">shop</a>
+						</li>
+						<li class="nav--mobile__item">
+							<a href="#" class="nav--mobile__link">about</a>
+						</li>
+						<li class="nav--mobile__item">
+							<a href="#" class="nav--mobile__link">contact</a>
+						</li>
+					</ul>
+				</nav>
 			</div>
-			<img
-				src="img/mobile-image-hero-1.jpg"
-				alt="Hero image 1"
-				class="hero__img"
-			/>
+			<nav class="nav">
+				<a href="/" class="logo__box">
+					<img src="img/logo.svg" alt="Room Logo" class="logo"
+				/></a>
+				<a href="#" class="nav__link">Home</a>
+				<a href="#" class="nav__link">Shop</a>
+				<a href="#" class="nav__link">About</a>
+				<a href="#" class="nav__link">Contact</a>
+			</nav>
+			<picture class="hero__img">
+				<source
+					srcset="img/desktop-image-hero-1.jpg"
+					media="(min-width: 56.25em)"
+				/>
+				<img
+					src="img/mobile-image-hero-1.jpg"
+					alt="Hero image 1"
+					class="hero__img"
+				/>
+			</picture>
+
 			<div class="slider__controls">
 				<button class="slider__control" title="Previous">
 					<img
@@ -53,34 +99,38 @@
 					/>
 				</button>
 			</div>
+			<!-- </div> -->
+			<section class="hero__info">
+				<div class="wrapper">
+					<h1 class="heading-1">
+						Discover innovative ways to decorate
+					</h1>
+					<p class="text">
+						We provide unmatched quality, comfort, and style for
+						property owners across the country. Our experts combine
+						form andnfunction in bringing your vision to life.
+						Create a room in your own style with our collection and
+						make your property a reflection of you and what you
+						love.
+					</p>
+					<a href="#" class="btn btn--icon">
+						Shop now
+						<svg
+							class="btn--icon__icon"
+							width="40"
+							height="12"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z"
+								fill="#000"
+								fill-rule="nonzero"
+							/>
+						</svg>
+					</a>
+				</div>
+			</section>
 		</div>
-		<section class="hero-info">
-			<div class="wrapper">
-				<h1 class="heading-1">Discover innovative ways to decorate</h1>
-				<p class="text">
-					We provide unmatched quality, comfort, and style for
-					property owners across the country. Our experts combine form
-					andnfunction in bringing your vision to life. Create a room
-					in your own style with our collection and make your property
-					a reflection of you and what you love.
-				</p>
-				<a href="#" class="btn btn--icon">
-					Shop now
-					<svg
-						class="btn--icon__icon"
-						width="40"
-						height="12"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<path
-							d="M34.05 0l5.481 5.527h.008v.008L40 6l-.461.465v.063l-.062-.001L34.049 12l-.662-.668 4.765-4.805H0v-1h38.206l-4.82-4.86L34.05 0z"
-							fill="#000"
-							fill-rule="nonzero"
-						/>
-					</svg>
-				</a>
-			</div>
-		</section>
 		<section class="about">
 			<div class="about__grid">
 				<img
@@ -110,16 +160,6 @@
 				/>
 			</div>
 		</section>
-		Home Shop About Contact Shop now We are available all across the globe
-		With stores all over the world, it's easy for you to find furniture for
-		your home or place of business. Locally, we’re in most major cities
-		throughout the country. Find the branch nearest you using our store
-		locator. Any questions? Don't hesitate to contact us today. Manufactured
-		with the best materials Our modern furniture store provide a high level
-		of quality. Our company has invested in advanced technology to ensure
-		that every product is made as perfect and as consistent as possible.
-		With three decades of experience in this industry, we understand what
-		customers want for their home and office. Shop now
 
 		<script src="js/app.js"></script>
 	</body>
